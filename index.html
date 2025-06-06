@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Console</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="console-container">
+    <!-- Bagian “frame” Gameboy -->
+    <div class="console-frame">
+      <!-- Header -->
+      <div class="console-header">
+        <span class="power-indicator"></span>
+        <span class="brand">POWER</span>
+        <span class="model">HEYTTL-BOY</span>
+      </div>
+
+      <!-- Layar utama -->
+      <div class="screen">
+        <div id="screen-content">
+          <!-- Konten awal: tulisan Happy Birthday! -->
+          <div class="welcome-screen">
+            <p>Happy Birthday!</p>
+            <p class="subtitle">Press Start Button</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bagian tombol-tombol menu -->
+      <div class="menu-buttons">
+        <button id="btn-message" class="btn-menu blue">MESSAGE</button>
+        <button id="btn-gallery" class="btn-menu red">GALLERY</button>
+        <button id="btn-music" class="btn-menu purple">MUSIC</button>
+        <button id="btn-tetris" class="btn-menu green">TETRIS</button>
+      </div>
+
+      <!-- D-pad (arah) dan A/B buttons -->
+      <div class="controls">
+        <div class="dpad">
+          <div class="up"></div>
+          <div class="left"></div>
+          <div class="center"></div>
+          <div class="right"></div>
+          <div class="down"></div>
+        </div>
+        <div class="buttons-ab">
+          <div class="btn-b">B</div>
+          <div class="btn-a">A</div>
+        </div>
+      </div>
+
+      <!-- Bagian bawah: Start & Select -->
+      <div class="bottom-buttons">
+        <div class="btn-start">START</div>
+        <div class="btn-select">SELECT</div>
+      </div>
+
+      <!-- “Speaker grill” di sudut kanan bawah -->
+      <div class="speaker-grill">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal / Container konten dinamis (Message, Gallery, Music, Tetris) -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-content">
+      <span id="modal-close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
